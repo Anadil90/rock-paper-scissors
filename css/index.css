@@ -1,0 +1,47 @@
+body {
+    background-color: #ffe4c4;
+}
+
+.main { /* main UI container */
+    width: 30em;
+    height: 12em;
+    border: 2px solid blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 40vh auto;
+}
+
+.player {
+    margin-top: 40px;
+}
+
+.playerName { 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#player1Display, #player2Display { /* select both player displays and apply margin and sizing to both */
+    margin: 20px 0;
+    background-color: #f0ffff;
+    font-size: 19px;
+}
+
+.fa-solid, .fa-regular { /* apply font sizing to UI icons */
+    font-size: 32px;
+}
+
+.play { /* style buttons to be rounded */
+    height: 45px;
+    border-radius: 50%;
+}
+
+.play:hover { /* toggle effects when user hovers on button */
+    cursor: pointer;
+    background-color: #ffd700;
+}
+
+.play:active {
+    transform: translateX(4px) /* shift button to the right when clicked */
+}

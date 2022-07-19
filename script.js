@@ -1,11 +1,44 @@
-const item = ["rock", "paper", "scissors"]
+const item = ["rock", "paper", "scissors"] //player item array
+
+let computerSelection = computerPlay() //computer randomly selects object
+
+// DOM elements 
+const player1display = document.getElementById("player1Display"); //player display
+const player2Display = document.getElementById("player2Display"); //player display
+const buttons = document.getElementsByTagName("button"); // div containing player buttons
+
+console.log(buttons.length)
+
+for(i = 0; i < buttons.length; i ++) {
+    let displayValue = "";
+    buttons[i].addEventListener("click", () => {
+            if(buttons[i] == 0 || 3) {
+                displayValue = "rock";
+                console.log(displayValue)
+            }
+
+             if(buttons[i] == 1 || 4) {
+                displayValue = "paper";
+                console.log(displayValue)
+            }
+
+            if(buttons[i] == 3 || 5) {
+                displayValue = "scissors";
+                console.log(displayValue)
+            }
 
 
-let computerSelection = computerPlay().toLowerCase() //computer randomly selects object
+
+            
+    })
+}
+
+// buttons.forEach((each) => {
+//     console.log(each.length)
+// })
 
 function computerPlay () {
-    let randomNumber  = Math.random() //returns a random number from 0 to 1
-    let randomIndex = Math.floor(randomNumber * 3) //returns a random index of array from 0 to 2
+    let randomIndex = Math.random(Math.floor() * item.length) //returns a random index of array from 0 to 2
     return item[randomIndex] //random item selection from array
 }
 
@@ -13,13 +46,11 @@ const playerWin = "You win!";
 const computerWin = "Computer wins!";
 let roundWinner = "";
 
-function playGame() {
-    let playerSelection = prompt("Enter your selection").toLowerCase() //player selects object
-    console.log(`Player selected ${playerSelection}`)
-    console.log(`Computer has selected ${computerSelection}`)
+function playGame(playerSelection, computerSelection) {
+    
     if(playerSelection === "rock" && computerSelection === "scissors") {
-        console.log(`Rock beats scissors. ${playerWin}`)
-        roundWinner = "player"
+        displayValue = "rock"
+        alert("yoiu won")
     }
 
     else if (computerSelection === "rock" && playerSelection === "scissors") {
@@ -64,17 +95,18 @@ function playRound () {
     for(let i = 0; i < 5; i++) {
 
         playGame()
+
         if(roundWinner == "player") {
-             player += 1
+             player ++
         }
 
         if(roundWinner == "computer") {
-            computer += 1
+            computer ++
         }
         
     }
     
-      if(player > computer) {
+    if(player > computer) {
         console.log("The player beat the computer!")
         console.log(`Player score is ${player} Computer score is ${computer}`)
     }
