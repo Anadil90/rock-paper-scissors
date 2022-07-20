@@ -13,23 +13,53 @@ body {
 }
 
 .player {
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
-.playerName { 
+.labelContainer {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
+    height: 24px;
 }
 
 #player1Display, #player2Display { /* select both player displays and apply margin and sizing to both */
     margin: 20px 0;
+    height: 24px;
     background-color: #f0ffff;
     font-size: 19px;
+    
 }
 
 .fa-solid, .fa-regular { /* apply font sizing to UI icons */
     font-size: 32px;
+}
+
+.fa-repeat {
+    font-size: 15px;
+
+}
+
+#switchPlayer {
+    margin-left: 20px;
+    height: 30px;
+    border: 1px solid #f5f5dc;
+    background-color: #add8e6;
+    border-radius: 5px;
+
+}
+
+#switchPlayer:hover {
+    cursor: pointer;
+    color: #fff;
+    background-color: #808080;
+    border: 1px solid #f5f5dc;
+}
+
+#switchPlayer:active { /* apply background color and box shadow to button when active */
+    background-color: #ffd700;
+    box-shadow: 1px 2px 7px 1px #ffd700;
 }
 
 .play { /* style buttons to be rounded */

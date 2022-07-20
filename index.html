@@ -11,13 +11,16 @@
 <body>
     <div class="main">
         <div class="player">
-            <!-- player name -->
-            <label class="playerName">player 1</label>
+            <div class="labelContainer">
+                <!-- player name -->
+            <label class="playerName">Player 1</label>
+            </div>
+            
             <!-- player display -->
-            <span id="player1Display" style="display:block;text-align:center;">rock</span>
-            <!-- player move -->
-            <div id="buttons">
-                <button class="play">
+            <span id="player1Display" style="display:block;text-align:center;"></span>
+            <!-- player buttons -->
+            <div id="buttonContainer">
+                <button class="play" onclick= 'p1Select("Rock")'>
                 <!-- button icon -->
                 <i class="fa-regular fa-hand-back-fist"></i> 
                 <!-- audio element: trigger when user clicks button -->
@@ -25,7 +28,7 @@
                     <source src="">
                 </audio>
             </button>
-            <button class="play"> 
+            <button class="play" onclick= 'p1Select("Paper")'> 
                 <!-- button icon -->
                 <i class="fa-regular fa-hand"> 
                 <!-- audio element: trigger when user clicks button -->    
@@ -33,7 +36,7 @@
                     <source src="">
                 </audio>
             </button>
-            <button class="play"> 
+            <button class="play" onclick= 'p1Select("Scissors")'> 
                 <!-- button icon -->
                 <i class="fa-regular fa-hand-scissors"></i> 
                 <!-- audio element: trigger when user clicks button -->
@@ -46,16 +49,34 @@
         </div>
 
         <div class="player">
-            <!-- player name -->
-            <label class="playerName">Player 2</label>
+            <div class="labelContainer">
+               <!-- player name -->
+            <label class="playerName">Player 2
+                
+            </label>
+             <!-- when user clicks button, player 1 can play with either player 2 or the computer -->
+                <button id="switchPlayer"><i class="fa-solid fa-repeat"></i></button>
+            </div>
+            
+            
             <!-- player display -->
-            <span id="player2Display" style="display:block;text-align:center;">scissors</span>
-            <!-- player move -->
-            <button class="play"><i class="fa-regular fa-hand-back-fist"></i></button>
-            <button class="play"><i class="fa-regular fa-hand"></i></button>
-            <button class="play"><i class="fa-regular fa-hand-scissors"></i></button>
+            <span id="player2Display" style="display:block;text-align:center;"></span>
+            <!-- player buttons -->
+            <div class="buttonContainer">
+               <button class="play" onclick= 'p2Select("Rock")'>
+                    <i class="fa-regular fa-hand-back-fist"></i>
+                </button>
+                <button class="play" onclick= 'p2Select("Paper")'>
+                    <i class="fa-regular fa-hand"></i>
+                </button>
+                <button class="play" onclick= 'p2Select("Scissors")'>
+                    <i class="fa-regular fa-hand-scissors"></i>
+                </button> 
+            </div>
+            
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 </html>

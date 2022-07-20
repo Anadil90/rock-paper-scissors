@@ -3,44 +3,51 @@ const item = ["rock", "paper", "scissors"] //player item array
 let computerSelection = computerPlay() //computer randomly selects object
 
 // DOM elements 
-const player1display = document.getElementById("player1Display"); //player display
-const player2Display = document.getElementById("player2Display"); //player display
+const player1display = document.getElementById("player1Display"); //player 1 selection display
+const player2Display = document.getElementById("player2Display"); //player 2 selection display
 const buttons = document.getElementsByTagName("button"); // div containing player buttons
-
-console.log(buttons.length)
-
-for(i = 0; i < buttons.length; i ++) {
-    let displayValue = "";
-    buttons[i].addEventListener("click", () => {
-            if(buttons[i] == 0 || 3) {
-                displayValue = "rock";
-                console.log(displayValue)
-            }
-
-             if(buttons[i] == 1 || 4) {
-                displayValue = "paper";
-                console.log(displayValue)
-            }
-
-            if(buttons[i] == 3 || 5) {
-                displayValue = "scissors";
-                console.log(displayValue)
-            }
+const switchPlayer = document.getElementById("switchPlayer") //toggle between player 2 and computer
+const secondPlayer = document.querySelectorAll(".playerName")[1]
 
 
-
-            
-    })
+function p1Select(item) {
+    player1display.innerText = item
 }
 
-// buttons.forEach((each) => {
-//     console.log(each.length)
-// })
+function p2Select(item) {
+    player2Display.innerText = item
+}
 
 function computerPlay () {
     let randomIndex = Math.random(Math.floor() * item.length) //returns a random index of array from 0 to 2
     return item[randomIndex] //random item selection from array
 }
+
+function selectPlayer() {
+    let player2 = false;
+    let x = false;
+    let switchCounter = ["Player 1", "Computer"]
+        let counter = []
+        let count = 0;
+        switchPlayer.addEventListener("click", () => {
+            
+            count ++; //increment count 
+            for(i = 0; i < 2; i++) {
+                if(count < 2) {
+                secondPlayer.innerText = switchCounter[count] //toggle innerText when user clicks button
+                
+                }
+                else{
+                    
+                    count = 0
+                    secondPlayer.innerText = switchCounter[count] //toggle innerText when user clicks button
+                }
+            }
+        
+        })
+    }
+    
+selectPlayer()
 
 const playerWin = "You win!";
 const computerWin = "Computer wins!";
