@@ -2,17 +2,30 @@ body {
     background-color: #ffe4c4;
 }
 
-.main { /* main UI container */
+#scoreBoard { /* player scoreboard */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20vh;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30em;
+    height: 30px;
+
+}
+
+
+.main{ /* main UI container */
     width: 30em;
     height: 12em;
     border: 2px solid blue;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin: 40vh auto;
+    margin: 10vh auto;
 }
 
-.player {
+.player { /* player board div */
     margin-top: 30px;
 }
 
@@ -21,14 +34,20 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    align-self: flex-end;
     height: 24px;
 }
 
+
+
 #player1Display, #player2Display { /* select both player displays and apply margin and sizing to both */
     margin: 20px 0;
+    width: 145px;
     height: 24px;
     background-color: #f0ffff;
     font-size: 19px;
+    border: none;
+    color: #000;
     
 }
 
@@ -42,7 +61,6 @@ body {
 }
 
 #switchPlayer {
-    margin-left: 20px;
     height: 30px;
     border: 1px solid #f5f5dc;
     background-color: #add8e6;
@@ -50,7 +68,7 @@ body {
 
 }
 
-#switchPlayer:hover {
+#switchPlayer:hover { /* animate button when user hovers */
     cursor: pointer;
     color: #fff;
     background-color: #808080;
@@ -62,16 +80,16 @@ body {
     box-shadow: 1px 2px 7px 1px #ffd700;
 }
 
-.play { /* style buttons to be rounded */
+ .p1Buttons, .p2Buttons { 
     height: 45px;
     border-radius: 50%;
 }
 
-.play:hover { /* toggle effects when user hovers on button */
+ /* .p1Buttons, .p2Buttons:hover { 
     cursor: pointer;
     background-color: #ffd700;
-}
+}  */
 
-.play:active {
-    transform: translateX(4px) /* shift button to the right when clicked */
-}
+/* .p1Buttons, .p2Buttons:active { 
+    transform: translateX(4px)
+}    */

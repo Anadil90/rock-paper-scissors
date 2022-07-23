@@ -9,72 +9,72 @@
     <title>Rock paper scissors</title>
 </head>
 <body>
+
+
+    <!-- score board --------------------------------------->
+        <div id="scoreBoard">  
+            <!-- player 1 score -->
+            <h1 class="score" id="score1">0</h1>
+            <!-- player 2/computer score -->
+            <h1 class="score" id="score2">0</h1>   
+        </div>
+    <!-- end of score board -------------------------------->
+
     <div class="main">
+        <!-- player board ------------------------------------------------------------>
         <div class="player">
+            <div id="result"></div>
             <div class="labelContainer">
                 <!-- player name -->
-            <label class="playerName">Player 1</label>
+                <label class="playerName">Player 1</label>
             </div>
             
             <!-- player display -->
-            <span id="player1Display" style="display:block;text-align:center;"></span>
+            <input id="player1Display" type="text" disabled style="display:block;text-align:center;"></input>
             <!-- player buttons -->
             <div id="buttonContainer">
-                <button class="play" onclick= 'p1Select("Rock")'>
-                <!-- button icon -->
-                <i class="fa-regular fa-hand-back-fist"></i> 
-                <!-- audio element: trigger when user clicks button -->
-                <audio> 
-                    <source src="">
-                </audio>
-            </button>
-            <button class="play" onclick= 'p1Select("Paper")'> 
-                <!-- button icon -->
-                <i class="fa-regular fa-hand"> 
-                <!-- audio element: trigger when user clicks button -->    
-                <audio> </i>
-                    <source src="">
-                </audio>
-            </button>
-            <button class="play" onclick= 'p1Select("Scissors")'> 
-                <!-- button icon -->
-                <i class="fa-regular fa-hand-scissors"></i> 
-                <!-- audio element: trigger when user clicks button -->
-                <audio>
-                    <source src="">
-                </audio>
-            </button>
+                <button class="p1Buttons" id="rock">
+                    
+                    <i class="fa-regular fa-hand-back-fist"></i> 
+                </button>
+
+                <button class="p1Buttons" id="paper"> 
+            
+                    <i class="fa-regular fa-hand"></i>
+                </button>
+
+                <button class="p1Buttons" id="scissors"> 
+                    
+                    <i class="fa-regular fa-hand-scissors"></i> 
+                </button>
             </div>
             
         </div>
 
         <div class="player">
             <div class="labelContainer">
-               <!-- player name -->
-            <label class="playerName">Player 2
-                
-            </label>
              <!-- when user clicks button, player 1 can play with either player 2 or the computer -->
-                <button id="switchPlayer"><i class="fa-solid fa-repeat"></i></button>
+                <button id="switchPlayer">Player 2</button>
             </div>
-            
             
             <!-- player display -->
-            <span id="player2Display" style="display:block;text-align:center;"></span>
+            <input id="player2Display" type="text" disabled style="display:block;text-align:center;"></span>
             <!-- player buttons -->
             <div class="buttonContainer">
-               <button class="play" onclick= 'p2Select("Rock")'>
+               <button class="p2Buttons" id="rock">
                     <i class="fa-regular fa-hand-back-fist"></i>
                 </button>
-                <button class="play" onclick= 'p2Select("Paper")'>
-                    <i class="fa-regular fa-hand"></i>
+
+                <button class="p2Buttons">
+                    <i class="fa-regular fa-hand" id="paper"></i>
                 </button>
-                <button class="play" onclick= 'p2Select("Scissors")'>
-                    <i class="fa-regular fa-hand-scissors"></i>
+
+                <button class="p2Buttons">
+                    <i class="fa-regular fa-hand-scissors" id="scissors"></i>
                 </button> 
-            </div>
-            
+            </div> 
         </div>
+        <!-- end of player board ------------------------------------------------------------------------>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></script>
     <script src="script.js"></script>
