@@ -11,10 +11,11 @@
 <body>
 
 
-    <!-- score board --------------------------------------->
+    <!-- score board ---------------------------------------> 
         <div id="scoreBoard">  
             <!-- player 1 score -->
             <h1 class="score" id="score1">0</h1>
+            <span id="result"></span>
             <!-- player 2/computer score -->
             <h1 class="score" id="score2">0</h1>   
         </div>
@@ -23,58 +24,41 @@
     <div class="main">
         <!-- player board ------------------------------------------------------------>
         <div class="player">
-            <div id="result"></div>
+            
             <div class="labelContainer">
                 <!-- player name -->
                 <label class="playerName">Player 1</label>
             </div>
             
             <!-- player display -->
-            <input id="player1Display" type="text" disabled style="display:block;text-align:center;"></input>
-            <!-- player buttons -->
-            <div id="buttonContainer">
-                <button class="p1Buttons" id="rock">
-                    
-                    <i class="fa-regular fa-hand-back-fist"></i> 
-                </button>
-
-                <button class="p1Buttons" id="paper"> 
-            
-                    <i class="fa-regular fa-hand"></i>
-                </button>
-
-                <button class="p1Buttons" id="scissors"> 
-                    
-                    <i class="fa-regular fa-hand-scissors"></i> 
-                </button>
-            </div>
-            
+            <span id="player1Display" style="display:block;text-align:center;"></span>
         </div>
 
+        <div id="buttonContainer">
+            <button class="p1Buttons" id="rock">
+                <i class="fa-regular fa-hand-back-fist"></i>    
+            </button>
+
+            <button class="p1Buttons" id="paper"> 
+                <i class="fa-regular fa-hand"></i>
+            </button>
+
+            <button class="p1Buttons" id="scissors">      
+                <i class="fa-regular fa-hand-scissors"></i> 
+            </button>
+        </div>  
+         
         <div class="player">
             <div class="labelContainer">
-             <!-- when user clicks button, player 1 can play with either player 2 or the computer -->
-                <button id="switchPlayer">Player 2</button>
-            </div>
-            
-            <!-- player display -->
-            <input id="player2Display" type="text" disabled style="display:block;text-align:center;"></span>
-            <!-- player buttons -->
-            <div class="buttonContainer">
-               <button class="p2Buttons" id="rock">
-                    <i class="fa-regular fa-hand-back-fist"></i>
-                </button>
-
-                <button class="p2Buttons">
-                    <i class="fa-regular fa-hand" id="paper"></i>
-                </button>
-
-                <button class="p2Buttons">
-                    <i class="fa-regular fa-hand-scissors" id="scissors"></i>
-                </button> 
+                <!-- player name -->
+                <label class="playerName">Computer</label>
             </div> 
+            <!-- player display -->
+            <span id="player2Display" style="display:block;text-align:center;"></span>   
         </div>
         <!-- end of player board ------------------------------------------------------------------------>
+        
+            
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></script>
     <script src="script.js"></script>
